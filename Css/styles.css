@@ -11,10 +11,32 @@ body{
 #menu a {
     font-size: 18px;
     font-weight: bold;
-    color: rgba(2, 66, 243, 0.527);
+    color: white;
+}
+#menu {
+    background-color:rgb(133, 197, 240);
+
+
 }
 
 #menu button{
     font-size: 18px;
     font-weight: bold;
 }
+
+#local{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#wrapper {
+    padding: 80px; 
+}
+
+#pago {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+

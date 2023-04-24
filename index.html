@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <script src="objects.js"></script>
     <script src="app.js"></script>
 
     <header class="container-fluid bg-light d-flex justify-content-center" >
@@ -21,125 +22,184 @@
         fs-6" > Envíos al Interior del País</p>
     </header>
 
+    <header class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-info p-3" id="menu">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <span class="text-dark fs-5 fw-bold">
-                    Crazy Puzzles
-                </span> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mi Cuenta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-
-
-                    <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+        <nav class="navbar navbar-expand-lg p-1 " id="menu">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="./Rompecabezas/rompecabezas.jpg" alt="img__logo" height="110px">
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li> -->
-
-
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="email" placeholder="Correo Electronico" 
-                    aria-label="email">
-                    <button class="btn btn-dark btn-outline-success text-light" type="button">Suscribete</button>
-                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto" >
+                        <li class="nav-item mx-3">
+                            <a class="nav-link  active"  aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-3 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarProductos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="./paginas/productos.html#Categoria__Mujer">Damas</a></li>
+                              <li><a class="dropdown-item" href="./paginas/productos.html#Categoria__Hombre">Caballeros</a></li>
+                             
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="./paginas/faq.html">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="./paginas/contacto.html">Contacto</a>
+                        </li>
+    
+    
+                    </ul>
+    
+                </div>
             </div>
-        </div>
-    </nav>
-
-
-    <section class="container-fluid p-4 mx-auto text-center fst-italic titulos">
-        <h3>#Mirá nuestros divertidos Rompecabezas#</h3>
-    </section>
-
-    <div class="row" >
-        
-        <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
-            <div class="card">
-                <img src="./Rompecabezas/Capri Box.JPG" class="card-img-top">
-                <div class="card-body">
-                    
-                    <h5 class="card-title">High Quality Capri 1500 Piezas</h5>
-                                       
-                    <h5>$8.890</h5>                    
-                    <button class="btn btn-primary">Comprar</button>
-                </div>
-            </div>                       
-        </div>
-        <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
-            <div class="card">
-                <img src="./Rompecabezas/Las Vegas Box.JPG" class="card-img-top">
-                <div class="card-body">
-                    
-                    <h5 class="card-title">High Quality Las Vegas 2000 Piezas</h5>
-                                                            
-                    <h5>$10.490</h5>                    
-                    <button class="btn btn-primary">Comprar</button>
-                </div>
-            </div>                       
-        </div>
-        <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
-            <div class="card">
-                <img src="./Rompecabezas/Leonardo Box.JPG" class="card-img-top" >
-                <div class="card-body">
-                    
-                    <h5 class="card-title">Museum Collection Leonardo 1000 Piezas</h5>
-                                    
-                    <h5>$7.250</h5>                    
-                    <button class="btn btn-primary">Comprar</button>
-                </div>
-            </div>                       
-        </div>
-        <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
-            <div class="card">
-                <img src="./Rompecabezas/Manhattan box.JPG" class="card-img-top" >
-                <div class="card-body">
-                    
-                    <h5 class="card-title">High Quality Manhattan 1500 Piezas</h5>
+        </nav>
+    
+    </header>
+    
+    
+    
+    
+        <section class="container-fluid p-4 mx-auto text-center fst-italic titulos">
+            <h3>#Mirá nuestros divertidos Rompecabezas#</h3>
+        </section>
+    
+        <div class="row" >
+            
+            <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
+                <div class="card">
+                    <img src="./Rompecabezas/Capri Box.JPG" class="card-img-top">
+                    <div class="card-body">
+                        
+                        <h5 class="card-title">High Quality Capri 1500 Piezas</h5>
+                                           
+                        <h5>$8.890</h5>                    
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>                       
+            </div>
+            <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
+                <div class="card">
+                    <img src="./Rompecabezas/Las Vegas Box.JPG" class="card-img-top">
+                    <div class="card-body">
+                        
+                        <h5 class="card-title">High Quality Las Vegas 2000 Piezas</h5>
+                                                                
+                        <h5>$10.490</h5>                    
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>                       
+            </div>
+            <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
+                <div class="card">
+                    <img src="./Rompecabezas/Leonardo Box.JPG" class="card-img-top" >
+                    <div class="card-body">
+                        
+                        <h5 class="card-title">Museum Collection Leonardo 1000 Piezas</h5>
                                         
-                    <h5>$8.890</h5>                    
-                    <button class="btn btn-primary">Comprar</button>
-                </div>
-            </div>                       
+                        <h5>$7.250</h5>                    
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>                       
+            </div>
+            <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
+                <div class="card">
+                    <img src="./Rompecabezas/Manhattan box.JPG" class="card-img-top" >
+                    <div class="card-body">
+                        
+                        <h5 class="card-title">High Quality Manhattan 1500 Piezas</h5>
+                                            
+                        <h5>$8.890</h5>                    
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>                       
+            </div>
+            <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
+                <div class="card">
+                    <img src="./Rompecabezas/Tower Bridge Box.JPG" class="card-img-top">
+                    <div class="card-body">
+                                            
+                        <h5 class="card-title">High Quality Tower Bridge 1500 Piezas</h5>
+                                                             
+                        <h5>$8.890</h5>                    
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>                       
+            </div>
+            
         </div>
-        <div class="col-xl-2 col-9 col-sm-5 col-lg-3 mx-auto my-2">
-            <div class="card">
-                <img src="./Rompecabezas/Tower Bridge Box.JPG" class="card-img-top">
-                <div class="card-body">
-                                        
-                    <h5 class="card-title">High Quality Tower Bridge 1500 Piezas</h5>
-                                                         
-                    <h5>$8.890</h5>                    
-                    <button class="btn btn-primary">Comprar</button>
+    
+        <footer class="w-100 pt-4" id="footer" style="background-color:rgb(25, 83, 121) ;">
+    
+            <div class="d-flex flex-column align-items-center" >
+    
+    
+                <div>
+                    <div class="text-light">
+                        <h3 class="fs-2"> Enterate de nuestras novedades!!</h3>
+                    </div>
+    
+                    <div id="newsletter">
+                        <div>
+                            <input type="text" class="form-control" placeholder="Email" aria-label="mail-news">
+                        </div>
+                        <div>
+                            <button class="btn btn-dark btn-outline-success text-light" type="button">Suscribete</button>
+                        </div>
+                    </div>
                 </div>
-            </div>                       
-        </div>
-        
-    </div>
+    
+            </div>
+            <div class="d-flex justify-content-center pt-3" id="redes">
+                <div class="d-flex alig">
+                    <h3 class="fs-4 text-light mx-2">Seguinos en</h3>
+                    <a href="https://www.facebook.com/" target="_blank" class="facebook">
+                        <i class="bi bi-facebook fs-3 mx-2" style="color: white;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="instagram">
+                        <i class="bi bi-instagram fs-3 mx-2" style="color: white; "></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div id="local">
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13153.438429695076!2d-58.51667252246093!3d-34.4937665057648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1644370913987!5m2!1ses!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <div id="wrapper">
+                        <h2 class="fs-4 text-light"><i class="bi bi-geo-alt"></i> Ubicados en Martinez</h2>
+                        <h2 class="fs-4 text-light"><i class="bi bi-pin-angle"></i> Ventas al por menor y por mayor</h2>
+                        <h2 class="fs-4 text-light"><i class="bi bi-truck"></i> Envíos a todo el país</h2>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="container d-flex" id="pago">
+                <div class="mb-2 pt-3 text-light">
+                    <h3 class="fs-2">Métodos de pago</h3>
+                </div>
+                <div class="iconos d-flex">
+                    <div>
+                        <i class="fs-1 bi bi-cash-coin"></i>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/50/000000/mercado-pago.png" />
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
 
 </body>
