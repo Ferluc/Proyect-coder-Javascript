@@ -1,18 +1,17 @@
 class Rompecabezas {
+    id;
     nombre;
-    piezas;
     marca;
-    modelo;
-    nivel;
+    piezas;
     precio;
+    
 
-    constructor(nombre,cantidad,marca,modelo,nivel,precio){
+    constructor(id,nombre,marca,piezas,precio){
+        this.id = id;
         this.nombre = nombre;
-        this.piezas = piezas;
         this.marca = marca;
-        this.modelo = modelo;
-        this.nivel = nivel;
-        this.precios = precios;
+        this.piezas = piezas;
+        this.precio = precio;
 
     }
    

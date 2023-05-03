@@ -1,39 +1,116 @@
 let carrito = [];
-const btncargar = document.getElementById('Capri');
-btncargar.addEventListener('click',altaItems);
 
+const items = [new Rompecabezas("Capri","Capri","Clementoni","1000 piezas",8.890),
+new Rompecabezas("lasvegas","Las Vegas","Clementoni","1000 piezas",10.490),
+new Rompecabezas("leonardo","Leonardo","Clementoni","1000 piezas", 7.250),
+new Rompecabezas("manhattan","Manhattan","Clementoni","1000 piezas",8.890),
+new Rompecabezas("towerbridge","Tower Bridge","Clementoni","1000 piezas",8.890),]
 
-function altaItems(){
-    const nuevoItem = new Item();
-    nuevoItem.nombre = prompt('Ingrese nombre del producto');
-    nuevoItem.piezas = Number(prompt('Ingrese Cantidad de Piezas'));
-    nuevoItem.marca = prompt('Ingrese marca del producto');
-    nuevoItem.nivel = prompt('Ingrese nivel de dificultad del producto');
-    nuevoItem.precio = Number(prompt('Ingrese precio del producto'));
- 
-    carrito.push(nuevoItem);
-    localStorage.setItem('carrito',JSON.stringify(carrito));
-    mostrarItemsCarrito();
+const botonCapri = document.getElementById("Capri");
+const botonVegas = document.getElementById("lasvegas");
+const botonLeonardo = document.getElementById("leonardo");
+const botonManhattan = document.getElementById("manhattan");
+const botonTower = document.getElementById("towerbridge");
+
+botonCapri.addEventListener('click',() => {
+    const producto = items.find((rompecabezas)=> {
+        return rompecabezas.id === botonCapri.dataset.id
+    });
+    carrito.push(producto);
+    //altaItems();
+    mostrarCarrito();
+    altaItems();
+});
+
+botonVegas.addEventListener('click',() => {
+    const producto = items.find((rompecabezas)=> {
+        return rompecabezas.id === botonVegas.dataset.id
+    });
+    carrito.push(producto);
+    //altaItems();
+    mostrarCarrito();
+    altaItems();
+});
+
+botonLeonardo.addEventListener('click',() => {
+    const producto = items.find((rompecabezas)=> {
+        return rompecabezas.id === botonLeonardo.dataset.id
+    });
+    carrito.push(producto);
+    //altaItems();
+    mostrarCarrito();
+    altaItems();
+});
+
+botonManhattan.addEventListener('click',() => {
+    const producto = items.find((rompecabezas)=> {
+        return rompecabezas.id === botonManhattan.dataset.id
+    });
+    carrito.push(producto);
+    //altaItems();
+    mostrarCarrito();
+    altaItems();
+});
+
+botonTower.addEventListener('click',() => {
+    const producto = items.find((rompecabezas)=> {
+        return rompecabezas.id === botonTower.dataset.id
+    });
+    carrito.push(producto);
+    //altaItems();
+    mostrarCarrito();
+    altaItems();
+});
+
+btnVaciar.addEventListener('click', vaciarCarrito);
+
+function altaItems() {
+
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    
 }
 
-function mostrarCarrito() {
+function mostrarCarrito() 
+{
     const tabla = document.getElementById('items');
-    tabla.innerHTML = '';
+    tabla.innerHTML = ``;
     let counter = 1;
+    console.log(carrito);
 
-    carrito.forEach((item) => {
-        tabla.innerHTML +=`
+    carrito.forEach((producto) => {
+        tabla.innerHTML += `
         <tr id='tablita'>
             <th>${counter}</th>
-            <td>${item.nombre}</td>
-            <td>${item.piezas}</td>
-            <td>${item.marca}</td>
-            <td>${item.nivel}</td>
-            <td>${item.precio}</td>
+            <td>${producto.nombre}</td>
+            <td>${producto.piezas}</td>
+            <td>${producto.marca}</td>
+            <td>${producto.nivel}</td>
+            <td>${producto.precio}</td>
             </tr>
             `;
-    counter++;
-console.log(tabla.innerHTML);
- });
+        counter++;
+        console.log(tabla.innerHTML);
+   })
+   tr = document.createElement('tr');
+   tr.innerHTML = `<th><th>
+                    <td><td>
+                    <td><td>
+                    <td><td>
+                    <td><td>
+                    <td><td>
+                    <td><td>
+                    <td>${carrito.reduce((total,item) => total + item.precio,0)}<td>
+                    `;
+   //tabla.appendchild(tr); 
+    
 
+}
+
+function vaciarCarrito()
+{
+
+      carrito = [];
+      localStorage.setItem('carrito',JSON.stringify(carrito));
+      mostrarCarrito();
 }
