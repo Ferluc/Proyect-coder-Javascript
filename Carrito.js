@@ -1,6 +1,6 @@
 let carrito = [];
 
-const items = [new Rompecabezas("Capri","Capri","Clementoni","1000 piezas",8.890),
+/* const items = [new Rompecabezas("Capri","Capri","Clementoni","1000 piezas",8.890),
 new Rompecabezas("lasvegas","Las Vegas","Clementoni","1000 piezas",10.490),
 new Rompecabezas("leonardo","Leonardo","Clementoni","1000 piezas", 7.250),
 new Rompecabezas("manhattan","Manhattan","Clementoni","1000 piezas",8.890),
@@ -60,9 +60,28 @@ botonTower.addEventListener('click',() => {
     //altaItems();
     mostrarCarrito();
     altaItems();
-});
+}); */
 
-btnVaciar.addEventListener('click', vaciarCarrito);
+const getProducts = async () => {
+    const response = await fetch("Datos/articulos.json");
+    const data = await response.json();
+    console.log(data);
+
+}
+
+getProducts();
+
+data.forEach((product) => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML =`
+    <img src="${product.img}">
+    <h3>${product.nombre}</h3>
+    <p class="price">${product.precio} $</p>`;
+
+})
+
+
 
 function altaItems() {
 
@@ -102,15 +121,14 @@ function mostrarCarrito()
                     <td><td>
                     <td>${carrito.reduce((total,item) => total + item.precio,0)}<td>
                     `;
-   //tabla.appendchild(tr); 
+   tabla.appendchild(tr); 
     
 
 }
 
-function vaciarCarrito()
-{
-
-      carrito = [];
-      localStorage.setItem('carrito',JSON.stringify(carrito));
-      mostrarCarrito();
-}
+const btnVaciar = document.getElementById('vaciar');
+btnVaciar.addEventListener('click', () =>{
+    carrito = []
+    localStorage.clear()
+    mostrarCarrito();
+});

@@ -1,0 +1,128 @@
+[
+    {
+        "id":"R-01",
+        "titulo":"Isla de Capri",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"8890",
+        "img":"../Rompecabezas/Capri.JPG"
+    },
+
+    {
+        "id":"R-02",
+        "titulo":"Las Vegas",
+        "marca":"Clementoni",
+        "piezas":"10000",
+        "precio":"10490",
+        "img":"./Rompecabezas/Las Vegas.JPG"    
+    },
+
+    {
+        "id":"R-03",
+        "titulo":"Leonardo Da Vinci",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"7250",
+        "img":"./Rompecabezas/Leonardo.JPG"   
+    },
+
+    {
+        "id":"R-04",
+        "titulo":"Ciudad de Manhattan",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"9950",
+        "img":"./Rompecabezas/Manhattan.JPG"       
+    },
+
+    {
+        "id":"R-05",
+        "titulo":"The Tower Bridge",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"8890",
+        "img":"./Rompecabezas/Tower Bridge.JPG"      
+    },
+
+    {
+        "id":"R-06",
+        "titulo":"Machu Pichu",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"10700",
+        "img":"./Rompecabezas/Machupichu.JPG"      
+    },
+
+    {
+        "id":"R-07",
+        "titulo":"Paris",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"10000",
+        "img":"./Rompecabezas/Paris.JPG"      
+    },
+
+    {
+        "id":"R-08",
+        "titulo":"The Grand Canal",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"8250",
+        "img":"./Rompecabezas/CanalPano.JPG"      
+    },
+
+    {
+        "id":"R-09",
+        "titulo":"Mapamundi",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"8000",
+        "img":"./Rompecabezas/Mapamundi.JPG"      
+    },
+
+    {
+        "id":"R-10",
+        "titulo":"Costa Italia",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"9200",
+        "img":"./Rompecabezas/Italia.JPG"      
+    },
+
+    {
+        "id":"R-11",
+        "titulo":"Carabela",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"7250",
+        "img":"./Rompecabezas/Carabela.JPG"      
+    },
+
+    {
+        "id":"R-12",
+        "titulo":"Milan",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"7250",
+        "img":"./Rompecabezas/Milan.JPG"      
+    },
+
+    {
+        "id":"R-13",
+        "titulo":"Gatitos",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"7250",
+        "img":"./Rompecabezas/Gatitos.JPG"      
+    },
+
+    {
+        "id":"R-14",
+        "titulo":"Caballos Panorámica",
+        "marca":"Clementoni",
+        "piezas":"1000",
+        "precio":"7250",
+        "img":"./Rompecabezas/CaballosPano.JPG"      
+    }
+
+]
