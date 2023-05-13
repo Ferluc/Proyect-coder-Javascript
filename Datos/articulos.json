@@ -1,127 +1,127 @@
 [
     {
         "id":"R-01",
-        "titulo":"Isla de Capri",
+        "nombre":"Isla de Capri",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"8890",
+        "piezas":1000,
+        "precio":8890,
         "img":"../Rompecabezas/Capri.JPG"
     },
 
     {
         "id":"R-02",
-        "titulo":"Las Vegas",
+        "nombre":"Las Vegas",
         "marca":"Clementoni",
-        "piezas":"10000",
-        "precio":"10490",
+        "piezas":10000,
+        "precio":10490,
         "img":"./Rompecabezas/Las Vegas.JPG"    
     },
 
     {
         "id":"R-03",
-        "titulo":"Leonardo Da Vinci",
+        "nombre":"Leonardo Da Vinci",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"7250",
+        "piezas":1000,
+        "precio":7250,
         "img":"./Rompecabezas/Leonardo.JPG"   
     },
 
     {
         "id":"R-04",
-        "titulo":"Ciudad de Manhattan",
+        "nombre":"Ciudad de Manhattan",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"9950",
+        "piezas":1000,
+        "precio":9950,
         "img":"./Rompecabezas/Manhattan.JPG"       
     },
 
     {
         "id":"R-05",
-        "titulo":"The Tower Bridge",
+        "nombre":"The Tower Bridge",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"8890",
+        "piezas":1000,
+        "precio":8890,
         "img":"./Rompecabezas/Tower Bridge.JPG"      
     },
 
     {
         "id":"R-06",
-        "titulo":"Machu Pichu",
+        "nombre":"Machu Pichu",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"10700",
+        "piezas":1000,
+        "precio":10700,
         "img":"./Rompecabezas/Machupichu.JPG"      
     },
 
     {
         "id":"R-07",
-        "titulo":"Paris",
+        "nombre":"Paris",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"10000",
+        "piezas":1000,
+        "precio":10000,
         "img":"./Rompecabezas/Paris.JPG"      
     },
 
     {
         "id":"R-08",
-        "titulo":"The Grand Canal",
+        "nombre":"The Grand Canal",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"8250",
+        "piezas":1000,
+        "precio":8250,
         "img":"./Rompecabezas/CanalPano.JPG"      
     },
 
     {
         "id":"R-09",
-        "titulo":"Mapamundi",
+        "nombre":"Mapamundi",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"8000",
+        "piezas":1000,
+        "precio":8000,
         "img":"./Rompecabezas/Mapamundi.JPG"      
     },
 
     {
         "id":"R-10",
-        "titulo":"Costa Italia",
+        "nombre":"Costa Italia",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"9200",
+        "piezas":1000,
+        "precio":9200,
         "img":"./Rompecabezas/Italia.JPG"      
     },
 
     {
         "id":"R-11",
-        "titulo":"Carabela",
+        "nombre":"Carabela",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"7250",
-        "img":"./Rompecabezas/Carabela.JPG"      
+        "piezas":1000,
+        "precio":7250,
+        "img":"./Rompecabezas/Barco.JPG"      
     },
 
     {
         "id":"R-12",
-        "titulo":"Milan",
+        "nombre":"Milan",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"7250",
+        "piezas":1000,
+        "precio":7250,
         "img":"./Rompecabezas/Milan.JPG"      
     },
 
     {
         "id":"R-13",
-        "titulo":"Gatitos",
+        "nombre":"Gatitos",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"7250",
+        "piezas":1000,
+        "precio":7250,
         "img":"./Rompecabezas/Gatitos.JPG"      
     },
 
     {
         "id":"R-14",
-        "titulo":"Caballos Panorámica",
+        "nombre":"Caballos Panorámica",
         "marca":"Clementoni",
-        "piezas":"1000",
-        "precio":"7250",
+        "piezas":1000,
+        "precio":7250,
         "img":"./Rompecabezas/CaballosPano.JPG"      
     }
 
