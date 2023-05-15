@@ -14,17 +14,23 @@ flex-wrap: wrap;
 }
 
 
-#card{
+.card{
     box-shadow: 0 4px 8px 0 rgba(0, 0,0,2);
     max-width: fit-content;
-    margin: auto;
+    margin: 20px;
+    padding: 20px;
     text-align: center;
-    background-color: black;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.comprar{
+    width: fit-content;
+    align-self: center;
 }
 
 
 #shopCont img{
-    display: flex;
+    display: grid;
     margin: 20px;
     width: 300px;
     height: 300px;
