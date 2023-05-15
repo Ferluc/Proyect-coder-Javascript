@@ -5,7 +5,7 @@
         "marca":"Clementoni",
         "piezas":1000,
         "precio":8890,
-        "img":"../Rompecabezas/Capri.JPG"
+        "img":"./Rompecabezas/Capri.JPG"
     },
 
     {

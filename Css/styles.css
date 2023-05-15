@@ -1,35 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Playfair+Display:ital,wght@1,500&family=Roboto&family=Ubuntu:wght@300&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    
+
 }
+
+.verCarrito{
+    position: relative;
+    text-align: right;
+}
+
+.verCarrito i {
+    font-size: 28px;
+}
+
 
 #shopCont {
-display: flex;
-justify-content:space-around;
-flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
 }
 
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0,2);
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
     max-width: fit-content;
     margin: 20px;
     padding: 20px;
     text-align: center;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.comprar{
+.comprar {
     width: fit-content;
     align-self: center;
 }
 
 
-#shopCont img{
+#shopCont img {
     display: grid;
     margin: 20px;
     width: 300px;
@@ -45,30 +55,66 @@ flex-wrap: wrap;
     font-weight: bold;
     color: white;
 }
+
 #menu {
-    background-color:rgb(133, 197, 240);
+    background-color: rgb(133, 197, 240);
 
 
 }
 
-#menu button{
+#menu button {
     font-size: 18px;
     font-weight: bold;
 }
 
-#local{
+#local {
     display: flex;
     justify-content: center;
     padding-top: 50px;
 }
 
 #wrapper {
-    padding: 80px; 
+    padding: 80px;
 }
 
 #pago {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+}
 
+#newsletter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    #banner {
+        width: 100%;
+    }
+
+    .mapa {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #local {
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    #section-contacto {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    #wrapper {
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}

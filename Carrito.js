@@ -56,15 +56,22 @@ const getProducts = async () => {
 
         carrito.forEach((product) => {
             let carritoContent = document.createElement("div")
-            carrito.className = "modal-content"
-            carrito.innerHTML = `
+            carritoContent.className = "bag-content"
+            carritoContent.innerHTML = `
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>$${product.precio} </p>
         `;
+
+        bagContainer.append(carritoContent);
         });
 
+        const total = carrito.reduce((acc,prod)=> acc + prod.precio, 0);
 
+        const totalCompra = document.createElement("div")
+        totalCompra.className="total-content"
+        totalCompra.innerHTML=`Total a Abonar:$ ${total}`;
+        bagContainer.append(totalCompra);
     });
 
 } //Cierre del getProducts
