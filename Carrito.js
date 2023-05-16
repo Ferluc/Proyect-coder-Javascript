@@ -1,4 +1,4 @@
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const shop = document.getElementById("shopCont");
 const verCarrito = document.getElementById("verCarrito");
 const bagContainer = document.getElementById("bagContainer");
@@ -40,6 +40,8 @@ const getProducts = async () => {
     }); // Cierre del forEach
 
     verCarrito.addEventListener("click", () => {
+        bagContainer.innerHTML="";
+        bagContainer.style.display ="flex";
         const bagHeader = document.createElement("div");
         bagHeader.className = "bag-Header"
         bagHeader.innerHTML = `
@@ -50,6 +52,10 @@ const getProducts = async () => {
         const modalbutton = document.createElement("h1");
         modalbutton.innerText = "X";
         modalbutton.className = "modal-header-button";
+
+        modalbutton.addEventListener("click",() => {
+            bagContainer.style.display ="none";
+        });
 
         bagHeader.append(modalbutton);
 
@@ -76,56 +82,20 @@ const getProducts = async () => {
 
 } //Cierre del getProducts
 
+const eliminarProducto =() =>{
+    const foundId = carrito.find((Element) => Element.id);
+    carrito = carrito.filter((carritoId)=> {
+        return carritoId !== foundId;
+    });
+    carritoCounter();
+    save();
+}
+
 getProducts();
 
 const save = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
-};
+ };
 
-/*
-
-
-function mostrarCarrito() 
-{
-    const tabla = document.getElementById('items');
-    tabla.innerHTML = ``;
-    let counter = 1;
-    console.log(carrito);
-
-    carrito.forEach((producto) => {
-        tabla.innerHTML += `
-        <tr id='tablita'>
-            <th>${counter}</th>
-            <td>${producto.nombre}</td>
-            <td>${producto.piezas}</td>
-            <td>${producto.marca}</td>
-            <td>${producto.nivel}</td>
-            <td>${producto.precio}</td>
-            </tr>
-            `;
-        counter++;
-        console.log(tabla.innerHTML);
-   })
-   tr = document.createElement('tr');
-   tr.innerHTML = `<th><th>
-                    <td><td>
-                    <td><td>
-                    <td><td>
-                    <td><td>
-                    <td><td>
-                    <td><td>
-                    <td>${carrito.reduce((total,item) => total + item.precio,0)}<td>
-                    `;
-   tabla.appendchild(tr); 
-    
-
-}
-
-const btnVaciar = document.getElementById('vaciar');
-btnVaciar.addEventListener('click', () =>{
-    carrito = []
-    localStorage.clear()
-    mostrarCarrito();
-});
- */
+JSON.parse(localStorage.getItem("carrito"))

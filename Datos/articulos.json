@@ -3,7 +3,7 @@
         "id":"R-01",
         "nombre":"Isla de Capri",
         "marca":"Clementoni",
-        "piezas":1000,
+        "piezas":1500,
         "precio":8890,
         "img":"./Rompecabezas/Capri.JPG"
     },
@@ -12,7 +12,7 @@
         "id":"R-02",
         "nombre":"Las Vegas",
         "marca":"Clementoni",
-        "piezas":10000,
+        "piezas":2000,
         "precio":10490,
         "img":"./Rompecabezas/Las Vegas.JPG"    
     },
@@ -30,7 +30,7 @@
         "id":"R-04",
         "nombre":"Ciudad de Manhattan",
         "marca":"Clementoni",
-        "piezas":1000,
+        "piezas":1500,
         "precio":9950,
         "img":"./Rompecabezas/Manhattan.JPG"       
     },
@@ -39,7 +39,7 @@
         "id":"R-05",
         "nombre":"The Tower Bridge",
         "marca":"Clementoni",
-        "piezas":1000,
+        "piezas":1500,
         "precio":8890,
         "img":"./Rompecabezas/Tower Bridge.JPG"      
     },
