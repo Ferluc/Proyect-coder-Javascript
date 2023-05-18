@@ -49,7 +49,7 @@ body {
 }
 
 .bagContainer{
-    width: 80%;
+    /* width: 80%;
     margin: 0 10%;
     max-height: 88vh;
     color: rgb(226, 234, 238);
@@ -57,11 +57,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    */
+    /* width: 100%;
+    height: 100%; */
+    flex-direction: column;
     position: fixed;
-    overflow: auto;
-    z-index: 9;
-    top:12vh;
+    right: 0;
+    overflow: scroll;
+    z-index: 3;
+    top:0;
+    /* padding: 1,5rem; */
+    margin-top: 8rem;
+    margin-right: 12px;
+    background-color: rgb(121, 214, 136);
     scrollbar-color: none;
 }
 

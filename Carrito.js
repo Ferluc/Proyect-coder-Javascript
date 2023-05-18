@@ -63,17 +63,21 @@ const getProducts = async () => {
         carrito.forEach((product) => {
             let carritoContent = document.createElement("div")
             carritoContent.className = "bag-content"
+            carritoContent.onclick = function(){
+                this.parentElement.removeChild(this);
+               eliminarProducto();
+            };
             carritoContent.innerHTML = `
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>$${product.precio} </p>
-        `;
+        <button>-</button>`;
 
         bagContainer.append(carritoContent);
         });
 
         const total = carrito.reduce((acc,prod)=> acc + prod.precio, 0);
-
+        
         const totalCompra = document.createElement("div")
         totalCompra.className="total-content"
         totalCompra.innerHTML=`Total a Abonar:$ ${total}`;
@@ -86,8 +90,9 @@ const eliminarProducto =() =>{
     const foundId = carrito.find((Element) => Element.id);
     carrito = carrito.filter((carritoId)=> {
         return carritoId !== foundId;
+        totalCompra();
     });
-    carritoCounter();
+    
     save();
 }
 
