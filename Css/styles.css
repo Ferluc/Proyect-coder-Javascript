@@ -96,6 +96,9 @@ body {
     height: 120px;
     width: 120px;
 }
+.delete-prod {
+    cursor: pointer;
+}
 
 .total-content {
     font-size: 25px;

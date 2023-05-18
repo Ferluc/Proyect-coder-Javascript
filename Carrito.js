@@ -34,83 +34,92 @@ const getProducts = async () => {
             });
             save();
             console.log(carrito);
-            
+
             Toastify({
-  text: "Se agregó al carrito",
-  duration: 800,
-  className: "info",
-  style: {
-    background: "linear-gradient(to right, #d5303e, #d5303e)",
-  }
-}).showToast();
+                text: "Se agregó al carrito",
+                duration: 800,
+                className: "info",
+                style: {
+                    background: "linear-gradient(to right, #d5303e, #d5303e)",
+                }
+            }).showToast();
         });
 
     }); // Cierre del forEach
+}; //Cierre del getProducts
 
-    verCarrito.addEventListener("click", () => {
-        bagContainer.innerHTML="";
-        bagContainer.style.display ="flex";
-        const bagHeader = document.createElement("div");
-        bagHeader.className = "bag-Header"
-        bagHeader.innerHTML = `
+
+const pintarCarrito = () => {
+
+
+    bagContainer.innerHTML = "";
+    bagContainer.style.display = "flex";
+    const bagHeader = document.createElement("div");
+    bagHeader.className = "bag-Header"
+    bagHeader.innerHTML = `
         <h1 class="header-title">Carrito</h1>`;
 
-        bagContainer.append(bagHeader);
+    bagContainer.append(bagHeader);
 
-        const modalbutton = document.createElement("h1");
-        modalbutton.innerText = "X";
-        modalbutton.className = "modal-header-button";
+    const modalbutton = document.createElement("h1");
+    modalbutton.innerText = "X";
+    modalbutton.className = "modal-header-button";
 
-        modalbutton.addEventListener("click",() => {
-            bagContainer.style.display ="none";
-        });
+    modalbutton.addEventListener("click", () => {
+        bagContainer.style.display = "none";
+    });
 
-        bagHeader.append(modalbutton);
+    bagHeader.append(modalbutton);
 
 
-        carrito.forEach((product) => {
-            
-            let carritoContent = document.createElement("div")
-            carritoContent.className = "bag-content"
-            carritoContent.onclick = function(){
-                this.parentElement.removeChild(this);
-               eliminarProducto();
-               
-               
-            };
-            carritoContent.innerHTML = `
+    carrito.forEach((product) => {
+
+        let carritoContent = document.createElement("div")
+        carritoContent.className = "bag-content"
+        carritoContent.innerHTML = `
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>$${product.precio} </p>
-        <button>-</button>`;
-        
+        `;
+
         bagContainer.append(carritoContent);
-        }); //cierre del foreach
-
-        totalprod();
+        
+        let eliminar = document.createElement("span");
+        eliminar.innerText = "❌";
+        eliminar.className = "delete-prod";
+        carritoContent.append(eliminar);
         
         
-    });
+        eliminar.addEventListener("click",eliminarProducto);
 
-} //Cierre del getProducts
+    }); //cierre del foreach
 
-let totalprod=()=>{
-    const total = carrito.reduce((acc,prod)=> acc + prod.precio, 0); 
+    totalprod();
+};
+
+verCarrito.addEventListener("click", pintarCarrito);
+
+
+
+let totalprod = () => {
+    const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
     const totalCompra = document.createElement("div")
-    totalCompra.className="total-content"
-    totalCompra.innerHTML=`Total a Abonar:$ ${total}`;
+    totalCompra.className = "total-content"
+    totalCompra.innerHTML = `Total a Abonar:$ ${total}`;
     bagContainer.append(totalCompra);
-    console.log(totalCompra);
+
 }
 
-const eliminarProducto =() =>{
-    const foundId = carrito.find((Element) => Element.id);
-    carrito = carrito.filter((carritoId)=> {
+const eliminarProducto = () => {
+    const foundId = carrito.find((element) => element.id);
+    carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
         
+
     });
-    
+    pintarCarrito();
     save();
+  
 }
 
 getProducts();
@@ -118,5 +127,7 @@ getProducts();
 const save = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
- };
+};
+
+
 
