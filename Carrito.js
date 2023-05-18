@@ -3,7 +3,6 @@ const shop = document.getElementById("shopCont");
 const verCarrito = document.getElementById("verCarrito");
 const bagContainer = document.getElementById("bagContainer");
 
-
 const getProducts = async () => {
     const response = await fetch("Datos/articulos.json");
     const data = await response.json();
@@ -35,6 +34,15 @@ const getProducts = async () => {
             });
             save();
             console.log(carrito);
+            
+            Toastify({
+  text: "Se agregó al carrito",
+  duration: 800,
+  className: "info",
+  style: {
+    background: "linear-gradient(to right, #d5303e, #d5303e)",
+  }
+}).showToast();
         });
 
     }); // Cierre del forEach
@@ -61,36 +69,45 @@ const getProducts = async () => {
 
 
         carrito.forEach((product) => {
+            
             let carritoContent = document.createElement("div")
             carritoContent.className = "bag-content"
             carritoContent.onclick = function(){
                 this.parentElement.removeChild(this);
                eliminarProducto();
+               
+               
             };
             carritoContent.innerHTML = `
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>$${product.precio} </p>
         <button>-</button>`;
-
-        bagContainer.append(carritoContent);
-        });
-
-        const total = carrito.reduce((acc,prod)=> acc + prod.precio, 0);
         
-        const totalCompra = document.createElement("div")
-        totalCompra.className="total-content"
-        totalCompra.innerHTML=`Total a Abonar:$ ${total}`;
-        bagContainer.append(totalCompra);
+        bagContainer.append(carritoContent);
+        }); //cierre del foreach
+
+        totalprod();
+        
+        
     });
 
 } //Cierre del getProducts
+
+let totalprod=()=>{
+    const total = carrito.reduce((acc,prod)=> acc + prod.precio, 0); 
+    const totalCompra = document.createElement("div")
+    totalCompra.className="total-content"
+    totalCompra.innerHTML=`Total a Abonar:$ ${total}`;
+    bagContainer.append(totalCompra);
+    console.log(totalCompra);
+}
 
 const eliminarProducto =() =>{
     const foundId = carrito.find((Element) => Element.id);
     carrito = carrito.filter((carritoId)=> {
         return carritoId !== foundId;
-        totalCompra();
+        
     });
     
     save();
@@ -103,4 +120,3 @@ const save = () => {
 
  };
 
-JSON.parse(localStorage.getItem("carrito"))
