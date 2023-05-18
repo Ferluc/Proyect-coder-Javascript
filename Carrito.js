@@ -80,21 +80,20 @@ const pintarCarrito = () => {
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>$${product.precio} </p>
+        <span class="delete-prod">❌</span>
         `;
 
         bagContainer.append(carritoContent);
-        
-        let eliminar = document.createElement("span");
-        eliminar.innerText = "❌";
-        eliminar.className = "delete-prod";
-        carritoContent.append(eliminar);
-        
-        
-        eliminar.addEventListener("click",eliminarProducto);
+        let eliminar = carritoContent.querySelector(".delete-prod");
 
+        eliminar.addEventListener("click",()=>{
+            eliminarProducto(product.id);
+        })
+        
+       
     }); //cierre del foreach
-
     totalprod();
+   
 };
 
 verCarrito.addEventListener("click", pintarCarrito);
@@ -110,15 +109,15 @@ let totalprod = () => {
 
 }
 
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id);
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((element) => element.id===id);
+    
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
-        
-
     });
-    pintarCarrito();
     save();
+    pintarCarrito();
+   
   
 }
 
